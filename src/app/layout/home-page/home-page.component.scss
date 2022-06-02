@@ -1,0 +1,16 @@
+.header-content{
+  display: flex;
+  padding: 2%;
+  .header-title{
+    margin-left: 1rem;
+    font-size: 2.5rem;
+  }
+  .links{
+    a{
+    margin-right: 4rem;
+    }
+  }
+}
+.header-content div:nth-of-type(1){
+  flex-grow: 0.8;
+}
