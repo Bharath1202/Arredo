@@ -1,10 +1,22 @@
-.sidenav{
-  background: #263238;
-  transition: all .5s ease;
-  position: fixed;
-  z-index :1;
-  top: 0%;
-  width: 5rem;
-  height: 10vh;
-  box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
+.sideNav{
+  display: flex;
+  padding: 8%;
+  font-size: 1.5rem;
+  .title{
+    margin: 3px 0px 0px 6px;
+  }
+}
+.sideNav-content{
+  margin: 13% 0px 0px 0%;
+  padding: 3%;
+  width: 15rem;
+ .content{
+    background-color: currentcolor;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+ }
+ a{
+  text-decoration: none;
+ }
 }
