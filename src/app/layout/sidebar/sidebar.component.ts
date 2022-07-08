@@ -1,6 +1,12 @@
-import { animate, animation, state, style, transition, trigger } from '@angular/animations';
+import {
+  animate,
+  animation,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-
 
 @Component({
   selector: 'app-sidebar',
@@ -9,47 +15,37 @@ import { Component, OnInit } from '@angular/core';
   animations: [
     trigger('toggleBox', [
       // ...
-      state('open', style({
-        height: '200px',
-        // backgroundColor: '#061ff0'
-      })),
-      state('closed', style({
-        height: '70px',
-        // backgroundColor: '#E91E63',
-      })),
-      transition('open => closed', [
-        animate('.3s')
-      ]),
-      transition('closed => open', [
-        animate('0.3s')
-      ]),
-    ])
-  ]
+      state(
+        'open',
+        style({
+          height: '30px',
+        })
+      ),
+      state('closed', style({})),
+      transition('open => closed', [animate('.3s')]),
+      transition('closed => open', [animate('0.3s')]),
+    ]),
+  ],
 })
-
 export class SidebarComponent implements OnInit {
-
-  public homeContent = false
-  public pages: any
+  public homeContent = false;
+  public pages: any;
   public isOpen: any;
+  public shop: any;
+  constructor() {}
 
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-  // showHome() {
-
-  //   this.homeContent = !this.homeContent
-  // }
-  showPage() {
-    this.pages = !this.pages
-  }
+  ngOnInit(): void {}
   showHome() {
     this.isOpen = !this.isOpen;
-    this.homeContent = !this.homeContent
-    console.log(this.isOpen)
+    this.homeContent = !this.homeContent;
+    console.log(this.isOpen);
   }
-
+  showPage() {
+    this.isOpen = !this.isOpen;
+    this.pages = !this.pages;
+  }
+  showShop() {
+    this.isOpen = !this.isOpen;
+    this.shop = !this.shop;
+  }
 }
-
