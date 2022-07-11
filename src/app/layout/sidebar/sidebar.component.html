@@ -1,0 +1,68 @@
+<mat-nav-list class="pt-0">
+  <div class="sideNav">
+    <div class="logo">
+      <img src="../../../assets/images/logo.png" class="center" />
+    </div>
+    <!-- <div class="icon mt-1">
+      <i class="bi bi-record-circle"></i>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="18"
+        fill="transparent"
+        stroke="blue"
+        stroke-width="-5"
+        class="bi bi-record-circle"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+        />
+        <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+      </svg>
+    </div> -->
+  </div>
+  <div class="sideNav-content">
+    <ul id="dropdown">
+      <li class="dropdown-content">
+        <span class="item_outer d-flex justify-content-between" [@toggleBox]="isOpen ? 'open' : 'closed'"
+          (click)="showHome()">
+          <a href="#">Home</a>
+          <i class="fa fa-chevron-down"></i>
+        </span>
+        <div class="content" *ngIf="homeContent">
+          <a href="#">Main Home</a>
+          <a href="#">Main Home</a>
+          <a href="#">Main Home</a>
+        </div>
+        <i></i>
+      </li>
+      <li class="dropdown-content">
+        <span class="item_outer d-flex justify-content-between" [@toggleBox]="isOpen ? 'open' : 'closed'"
+          (click)="showPage()">
+          <a href="#">Pages</a>
+          <i class="fa fa-chevron-down"></i>
+        </span>
+        <div class="content" *ngIf="pages">
+          <a href="#">About Us</a>
+          <a href="#">Contact Us</a>
+          <a href="#">FAQ Page</a>
+        </div>
+        <i></i>
+      </li>
+      <li class="dropdown-content">
+        <span class="item_outer d-flex justify-content-between" [@toggleBox]="isOpen ? 'open' : 'closed'"
+          (click)="showShop()">
+          <h5>Shop</h5>
+          <i class="fa fa-chevron-down"></i>
+        </span>
+        <div class="content" *ngIf="shop">
+          <a href="#">Prduct List</a>
+          <a href="#">With Filter</a>
+          <a href="#">Three Columns Grid</a>
+        </div>
+        <i></i>
+      </li>
+    </ul>
+  </div>
+</mat-nav-list>

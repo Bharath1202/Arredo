@@ -1,0 +1,46 @@
+.sideNav {
+  display: flex;
+  padding: 6%;
+  font-size: 1.5rem;
+}
+.sideNav-content {
+  margin: 13% 0px 0px 0%;
+  padding: 3%;
+  width: 15rem;
+  a {
+    text-decoration: none;
+  }
+}
+.sideNav div:nth-of-type(1) {
+  flex-grow: 2;
+}
+.center {
+  display: block;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+ul {
+  li {
+    list-style: none;
+  }
+  .dropdown-content {
+    margin-bottom: 1.5rem;
+
+    .content {
+      display: flex;
+      margin-top: 5%;
+      flex-direction: column;
+      a {
+        margin-bottom: 3%;
+      }
+    }
+  }
+}
+.show {
+  color: red;
+}
+.page {
+  color: green;
+}
