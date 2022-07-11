@@ -5,8 +5,7 @@ import { HomePageComponent } from './layout/home-page/home-page.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
   { path: 'sidebar', component: SidebarComponent }
 ];
