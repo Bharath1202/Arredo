@@ -1,8 +1,24 @@
-.card{
-  margin-top: 2%;
+.row {
+  position: relative;
+  .card {
+    margin-top: 2%;
     border-radius: 7px;
     box-shadow: 1px 1px 10px -3px;
-    .title{
-      text-align: end;
+    .card-body {
+      display: flex;
+      justify-content: end;
+      button {
+        border: none;
+      }
+      .cart {
+        font-size: large;
+        .badge {
+          font-size: 10px;
+        }
+      }
     }
+  }
+}
+.card-body div:nth-of-type(1) {
+  flex-grow: 0.02;
 }
