@@ -11,6 +11,7 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { HomePageComponent } from './layout/home-page/home-page.component';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { MatIconModule } from '@angular/material/icon';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSidenavModule,
+    HttpClientModule,
     MatListModule,
     MatIconModule
   ],
