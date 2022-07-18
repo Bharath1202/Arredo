@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { LayoutService } from '../service/layout.service';
 
 @Component({
   selector: 'app-home-page',
@@ -7,12 +8,12 @@ import { NavbarComponent } from '../navbar/navbar.component';
   styleUrls: ['./home-page.component.scss'],
 })
 export class HomePageComponent implements OnInit {
-  @Output() public sendDta = new EventEmitter<number>();
-  constructor() {}
+  public counter = 0;
+  constructor(private layoutService: LayoutService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
   btn() {
-    let counter = 0;
-    this.sendDta.emit((counter += 1));
+    let data = this.layoutService.counter()
+    console.log(data);
   }
 }
