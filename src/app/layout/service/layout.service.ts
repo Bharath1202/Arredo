@@ -1,15 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LayoutService {
+  subject: Subject<number>;
+  constructor(private httpCLient: HttpClient) {
+    this.subject = new Subject<number>();
+  }
 
-  constructor(private httpCLient: HttpClient) { }
-
-  public count = 0
-  counter() {
-    return this.count += 1
+  sendData(data: number) {
+    this.subject.next(data);
   }
 }

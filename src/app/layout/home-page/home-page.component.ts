@@ -8,12 +8,14 @@ import { LayoutService } from '../service/layout.service';
   styleUrls: ['./home-page.component.scss'],
 })
 export class HomePageComponent implements OnInit {
-  public counter = 0;
-  constructor(private layoutService: LayoutService) { }
+  constructor(private layoutService: LayoutService) {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.layoutService.subject.subscribe((res) => {
+      console.log(res);
+    });
+  }
   btn() {
-    let data = this.layoutService.counter()
-    console.log(data);
+    console.log(this.layoutService.sendData(Math.random()));
   }
 }

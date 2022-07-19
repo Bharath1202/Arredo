@@ -8,12 +8,7 @@ import { LayoutService } from '../service/layout.service';
 })
 export class NavbarComponent implements OnInit {
   public counter = 0;
-  constructor(private layoutService: LayoutService) { }
+  constructor(private layoutService: LayoutService) {}
 
-
-  ngOnInit(): void {
-    console.log(this.layoutService.counter());
-
-    // this.counter = this.layoutService.counter()
-  }
+  ngOnInit(): void {}
 }

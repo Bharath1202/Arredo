@@ -12,6 +12,7 @@ import { HomePageComponent } from './layout/home-page/home-page.component';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
+import { LayoutService } from './layout/service/layout.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,9 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatSidenavModule,
     HttpClientModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [LayoutService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
