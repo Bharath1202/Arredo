@@ -9,13 +9,13 @@ import { LayoutService } from '../service/layout.service';
 })
 export class HomePageComponent implements OnInit {
   constructor(private layoutService: LayoutService) {}
-
+  public data = 0;
   ngOnInit(): void {
     this.layoutService.subject.subscribe((res) => {
       console.log(res);
     });
   }
   btn() {
-    console.log(this.layoutService.sendData(Math.random()));
+    this.layoutService.sendData(this.data);
   }
 }

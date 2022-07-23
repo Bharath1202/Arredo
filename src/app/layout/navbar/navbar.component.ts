@@ -10,5 +10,9 @@ export class NavbarComponent implements OnInit {
   public counter = 0;
   constructor(private layoutService: LayoutService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.layoutService.subject.subscribe((res: any) => {
+      this.counter = res;
+    });
+  }
 }
